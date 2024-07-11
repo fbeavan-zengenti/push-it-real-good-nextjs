@@ -1,5 +1,3 @@
-/// <reference lib="webworker" />
-export default null;
 console.log("Loaded service worker!");
 
 self.addEventListener("push", (ev) => {

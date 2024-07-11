@@ -1,11 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { NOUN_LIST } from "@/utils/noun-list";
-import webPush from "web-push";
+import webPush from 'web-push';
 
-// PUBLIC_VAPID_KEY="BOgbgF6VGoAG5LvcbhCp5MCPM2Pxjtf9iqEUfkHG7J54kGWrJHNDTJnJ2rHDJKpCgpQhhyffqosUoF6zPCJcVvI"
-// PRIVATE_VAPID_KEY="ygmmuyrZ3-pXcqPDyEw-V7jZY5YWQw0mFpTPKvxqGyo"
-
-export async function POST(req: Request, res: Response) {
-    const subscription = await req.json();
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'POST') {
+    const subscription = await req.body;
 
     setInterval(() => {
         const word1 = NOUN_LIST[Math.floor(Math.random() * NOUN_LIST.length)];
@@ -14,17 +13,13 @@ export async function POST(req: Request, res: Response) {
         const payload = JSON.stringify({
         title: "I speaketh now listen!",
         instruction: `Behind the ${word1} is a ${word2}. Sit on the ${word3}`,
-      });
-      webPush.sendNotification(subscription, payload).catch((error) => {
+        });
+        webPush.sendNotification(subscription, payload).catch((error) => {
         console.error(error.stack);
-      });
+        });
     }, 10000);
 
+    res.status(200).json({})
     console.info(JSON.stringify(subscription));
-
-    return new Response("OK")
-
-    // const body = await req.json();
-    // console.log(body)
-    // return new Response("OK")
+  } 
 }

@@ -1,60 +1,35 @@
 "use client"
-
 import React from "react";
-// PRIVATE_VAPID_KEY="ygmmuyrZ3-pXcqPDyEw-V7jZY5YWQw0mFpTPKvxqGyo"
-
-const publicVapidKey = "BOgbgF6VGoAG5LvcbhCp5MCPM2Pxjtf9iqEUfkHG7J54kGWrJHNDTJnJ2rHDJKpCgpQhhyffqosUoF6zPCJcVvI";
-
 
 const Home = () => {
-  const [subscription, setSubscription] = React.useState<any>();
 
   React.useEffect(() => {
-    const doRegisterServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          console.log("Registering service worker");
-          const registration = await navigator.serviceWorker.register('/service-worker/worker.js', {  scope: '/' });
-          console.log("Registered service worker");
+    if ('serviceWorker' in navigator) {
+        console.log('Found "ServiceWorker" in Navigator');
 
-          console.log("Registering push");
-          const subscription = await registration.pushManager.subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: publicVapidKey,
-          });
+        navigator.serviceWorker
+        .register('/service-worker/worker.js')
+        .then((registration) => {
+            console.log("Successfully Registered");
 
-          console.log({ subscription })
-          setSubscription(subscription);
-          console.log("Registered push");
+            registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: "BOgbgF6VGoAG5LvcbhCp5MCPM2Pxjtf9iqEUfkHG7J54kGWrJHNDTJnJ2rHDJKpCgpQhhyffqosUoF6zPCJcVvI",
+            }).then(async (subscription) => {
+                console.log("Successfully Subscribed");
 
-        } catch (error) {
-          console.error('Error registering service worker:', error);
-        }
-      }
-    };
-
-    doRegisterServiceWorker();
-  }, []);
-
-
-
-  const doSubscribe = async () => {
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(subscription),
-      });
-      
-      if (response.ok) alert('Subscription successful!');
-      else alert('Subscription failed. Please try again.');
-    } catch (error) {
-      console.error('Error subscribing:', error);
-      alert('An error occurred while subscribing. Please try again later.');
+                await fetch('/api/subscribe', {
+                    method: "POST",
+                    body: JSON.stringify(subscription),
+                    headers: {
+                    "Content-Type": "application/json",
+                    },
+                })
+            });
+        });
     }
-  };
+}, []);
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[var(--semantic-background-primary)] text-[var(--semantic-type-primary)]">
@@ -70,13 +45,13 @@ const Home = () => {
               placeholder="Enter your email" type="email" name="email" id="email"
               />
             </div>
-          <button
+          {/* <button
             type="button"
             onClick={doSubscribe}
             className="py-2 px-6 bg-[var(--semantic-action-prority-background)] hover:bg-[var(--semantic-action-prority-hover)] text-[var(--semantic-action-prority-text)] rounded-[0.25rem] focus:outline-none self-end"
           >
             Subscribe
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
