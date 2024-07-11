@@ -1,6 +1,42 @@
 "use client"
 
+import React from "react";
+// PRIVATE_VAPID_KEY="ygmmuyrZ3-pXcqPDyEw-V7jZY5YWQw0mFpTPKvxqGyo"
+
+const publicVapidKey = "BOgbgF6VGoAG5LvcbhCp5MCPM2Pxjtf9iqEUfkHG7J54kGWrJHNDTJnJ2rHDJKpCgpQhhyffqosUoF6zPCJcVvI";
+
+
 const Home = () => {
+  const [subscription, setSubscription] = React.useState<any>();
+
+  React.useEffect(() => {
+    const doRegisterServiceWorker = async () => {
+      if ('serviceWorker' in navigator) {
+        try {
+          console.log("Registering service worker");
+          const registration = await navigator.serviceWorker.register('/service-worker/worker.js', {  scope: '/' });
+          console.log("Registered service worker");
+
+          console.log("Registering push");
+          const subscription = await registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: publicVapidKey,
+          });
+
+          console.log({ subscription })
+          setSubscription(subscription);
+          console.log("Registered push");
+
+        } catch (error) {
+          console.error('Error registering service worker:', error);
+        }
+      }
+    };
+
+    doRegisterServiceWorker();
+  }, []);
+
+
 
   const doSubscribe = async () => {
     try {
@@ -9,7 +45,7 @@ const Home = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: 'cxm@zengenti.com' })
+        body: JSON.stringify(subscription),
       });
       
       if (response.ok) alert('Subscription successful!');
