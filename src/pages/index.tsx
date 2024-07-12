@@ -93,12 +93,13 @@ const [events, setEvents] = React.useState<Entry[]>([]);
 
   return (
     <div className="min-h-screen bg-[var(--semantic-background-primary)] text-[var(--semantic-type-primary)] px-4">
+      <h1 className="py-[80px] text-4xl md:text-7xl font-bold text-center">Events</h1>
       <div>
         <div className="flex flex-col items-start justify-start w-full max-w-[1000px] mx-auto">
           {Object.keys(grouped)?.map((key: any) => {
             return (
               <div key={key} className="my-8 w-full">
-              <h1 className="text-7xl capitalize mb-4">{key}</h1>
+              <h1 className="text-3xl md:text-5xl font-bold capitalize mb-4">{key} Events</h1>
               <ul className="flex flex-col gap-4 w-full">
                 {((grouped as any)[key] ).map((groupedEvt: Entry) => {
                   // if (!groupedEvt?.sys?.uri) return null;

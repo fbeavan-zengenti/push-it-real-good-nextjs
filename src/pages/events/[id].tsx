@@ -92,18 +92,18 @@ const Event = () => {
         </Link>
       <div className='px-4 pt-[60px] pb-[120px]'>
   
-        <div className='text-center flex flex-col gap-4 py-4 w-full max-w-[1000px] mx-auto'> 
+        <div className='text-center flex flex-col gap-4 py-4 w-full max-w-[1520px] mx-auto'> 
         {imgPath && (
-          <Image src={`${imgHost}${imgPath}`}  alt="" width={1000} height={200} />
+          <Image src={`${imgHost}${imgPath}`}  alt="" width={1000} height={200}  className='w-full max-w-[1000px] mx-auto h-[200px] object-contain mb-[24px]'/>
           )}
-          <h1 className='text-5xl md:text-7xl font-bold'>{entry?.entryTitle}</h1>
+          <h1 className='text-5xl md:text-7xl font-bold w-full max-w-[1000px] mx-auto'>{entry?.entryTitle}</h1>
           {entry?.entryDescription && (
-            <div dangerouslySetInnerHTML={{ __html: entry?.entryDescription }} />
+            <div className='w-full max-w-[1000px] mx-auto' dangerouslySetInnerHTML={{ __html: entry?.entryDescription }} />
           )}
           {status==='live' && (
             <>
             <Link href="#" className="py-2 px-6 bg-[var(--semantic-action-prority-primary-background)] hover:bg-[var(--semantic-action-prority-primary-hover)] text-[var(--semantic-action-prority-primary-text)] rounded-[0.25rem] focus:outline-none self-center">Subscribe</Link>
-            <div className='flex flex-col gap-[40px] mt-[120px] mb-[60px] m:my-[120px]'>
+            <div className='flex flex-col gap-[40px] mt-[120px] mb-[60px] m:my-[120px] w-full max-w-[1000px] mx-auto'>
             {entry?.agendaSlot?.map((agendaSlotItem:any, i:number) => {
               console.log(isNow(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to) )
               const agendaSlotItemImagePage = agendaSlotItem?.entryThumbnail?.asset?.sys?.uri;
@@ -115,14 +115,13 @@ const Event = () => {
                     <Image src={`${imgHost}${agendaSlotItemImagePage}`}  alt="" width={350} height={350} />
                   )}
                   <div className='flex flex-col gap-[24px] text-left'>
-                  <span>{formatDateAndTime(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to)}</span>
+                  <span className='text-2xl	text-[var(--semantic-type-secondary)]'>{formatDateAndTime(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to)}</span>
+                  <div className='flex flex-col items-start gap-2'>
                   {isNow(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to) && (
-                    <>
-                    <Pill status="live" />
-                  -
-                  </>
+                    <><Pill status="live" /></>
                     )}
                   <h2 className='text-2xl font-bold'>{agendaSlotItem?.entryTitle}</h2> 
+                  </div>
                   <p>{agendaSlotItem?.entryDescription}</p>
                   </div>
                 </div>
@@ -134,13 +133,10 @@ const Event = () => {
                   <div key={i} className='flex flex-col justify-center md:flex-row gap-[40px] items-center py-[40px] border-y-[1px] border-[var(--semantic-border-primary)]'>
                   <div className='flex flex-col justify-center items-center gap-[24px] text-center'>
                   
-                  <span>{formatDateAndTime(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to)}</span>
+                  <span className='text-2xl	text-[var(--semantic-type-secondary)]'>{formatDateAndTime(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to)}</span>
                   <div className='flex flex-row items-center gap-2'>
                     {isNow(agendaSlotItem?.dateAndTime?.from, agendaSlotItem?.dateAndTime?.to) && (
-                      <>
-                    <Pill status="live" />
-                  -
-                      </>
+                      <><Pill status="live" /> -</>
                     )}
                     <h2 className='text-2xl font-bold'>{agendaSlotItem?.entryTitle}</h2> 
                   </div>
@@ -162,15 +158,43 @@ const Event = () => {
               <form className='flex flex-col items-start gap-4'>
                 <div className='flex flex-col items-start gap-[8px] w-full'>
                 <label htmlFor="name">Name (Required)</label>
-                <input className="border w-full p-2 rounded" type="text" id="name" name="name"/>
+                <input className="bg-[var(--semantic-background-secondary)] border w-full p-2 rounded" type="text" id="name" name="name"/>
                 </div>
                 <div className='flex flex-col items-start gap-[8px] w-full'>
                 <label htmlFor="email">Email: (Required)</label>
-                <input className="border w-full p-2 rounded" type="email" id="email" name="email"/>
+                <input className="bg-[var(--semantic-background-secondary)] border w-full p-2 rounded" type="email" id="email" name="email"/>
                 </div>
-                <button type="button" className="py-2 px-6 bg-[var(--semantic-action-prority-primary-background)] hover:bg-[var(--semantic-action-prority-primary-hover)] text-[var(--semantic-action-prority-primary-text)] rounded-[0.25rem] focus:outline-none self-start">Sign up</button>
+                <button type="button" className="mt-3 py-2 px-6 bg-[var(--semantic-action-prority-primary-background)] hover:bg-[var(--semantic-action-prority-primary-hover)] text-[var(--semantic-action-prority-primary-text)] rounded-[0.25rem] focus:outline-none self-start">Sign up</button>
               </form>
             </div>
+          )}
+          {status === 'passed' && (
+            <>
+            {entry?.composer?.map((composerItem: any) => {
+
+              switch(composerItem?.type) {
+                case "imageGallery": {
+                  const images = composerItem?.value;
+                  return (
+                    <div className='mt-[40px] grid gap-[16px] md:gap-[40px] grid-cols-3 '>
+                      {images?.map((image: any, i:number) => {
+                        return (
+                          <Image 
+                            key={i} 
+                            alt=""  
+                            src={`${imgHost}${image?.asset?.sys?.uri}`} height={480} width={480} 
+                          />
+                        )
+                      })}
+                    </div>
+                  )
+                }
+
+                default:
+                  return <></>
+              }
+            })}
+            </>
           )}
         </div>
       </div>
