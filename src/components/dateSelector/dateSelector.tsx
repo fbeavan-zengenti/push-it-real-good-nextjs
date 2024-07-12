@@ -7,15 +7,16 @@ const DateSelector = ({ today, date, setDate }: any) => {
     
     switch (selectedValue) {
       case 'yesterdays-date':
+        
         newDate = new Date(today);
-        newDate.setDate(today.getDate() - 1);
+        newDate.setDate(today.getDate() + 1);
         break;
       case 'today-date':
         newDate = today;
         break;
       case 'tomorrows-date':
         newDate = new Date(today);
-        newDate.setDate(today.getDate() + 1);
+        newDate.setDate(today.getDate() - 1);
         break;
       default:
         newDate = today;
