@@ -6,7 +6,7 @@ self.addEventListener("push", (ev) => {
     console.log("Got push", data);
     self.registration.showNotification(data.title, {
       body: data.instruction ?? "",
-      icon: "http://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png",
+      icon: "https://www.contensis.com/image-library/svgs/contensis-logo-minimal.svg",
     });
   }
 });
