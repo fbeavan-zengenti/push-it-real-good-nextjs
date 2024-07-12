@@ -38,4 +38,5 @@
   { "email": "example@example.com" }
   ```
 
+
   [TODO] allow user to unsubsribe to notifications
