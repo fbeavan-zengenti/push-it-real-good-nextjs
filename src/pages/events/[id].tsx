@@ -150,15 +150,19 @@ const Event = () => {
             </>
           )}
           {status === 'upcoming' && (
-            <div className='grid gap-[80px] grid-cols-1 md:grid-cols-2 my-[60px] md:my-[120px]'>
+            <div className='grid gap-[80px] grid-cols-1 md:grid-cols-2 my-[60px] md:my-[120px] w-full max-w-[1200px] mx-auto'>
               <div className='text-left flex flex-col gap-[40px]'>
               <h2 className='text-2xl'>Sign up for free</h2>
               <p>Utilise our software to audit your content. Highlight all the areas of your website that are underperforming, with detailed reports for accessibility, SEO and performance. Take a deep dive into your content and get useful insights with Insytful.</p>
               </div>
-              <form className='flex flex-col items-start gap-4'>
+              <form className='flex flex-col items-start gap-[24px]'>
                 <div className='flex flex-col items-start gap-[8px] w-full'>
                 <label htmlFor="name">Name (Required)</label>
                 <input className="bg-[var(--semantic-background-secondary)] border w-full p-2 rounded" type="text" id="name" name="name"/>
+                </div>
+                <div className='flex flex-col items-start gap-[8px] w-full'>
+                <label htmlFor="email">Organisation: (Required)</label>
+                <input className="bg-[var(--semantic-background-secondary)] border w-full p-2 rounded" type="email" id="email" name="email"/>
                 </div>
                 <div className='flex flex-col items-start gap-[8px] w-full'>
                 <label htmlFor="email">Email: (Required)</label>
