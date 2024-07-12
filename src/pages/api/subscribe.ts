@@ -16,7 +16,7 @@ export default async function handler(
             const payload = JSON.stringify(zenEventNotification);
             await webPush.sendNotification(subscription, payload);
           } catch (error) {
-            console.error("send notification error");
+            console.error(JSON.stringify(error));
           }
         }
       } else {
@@ -25,7 +25,7 @@ export default async function handler(
           const payload = JSON.stringify(zenEventNotification);
           await webPush.sendNotification(subscription, payload);
         } catch (error) {
-          console.error("send notification error");
+          console.error(JSON.stringify(error));
         }
       }
     }, 10000);

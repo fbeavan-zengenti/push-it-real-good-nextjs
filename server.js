@@ -1,7 +1,7 @@
 const { createServer } = require("http");
 const { parse } = require("url");
-const next = require("next");
 const webPush = require("web-push");
+const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname = "localhost";
@@ -10,13 +10,12 @@ const port = 3000;
 const app = next({ dev, hostname, port });
 const handle = app.getRequestHandler();
 
-webPush.setVapidDetails(
-  "mailto:m.turner@zengenti.com",
-  "BOgbgF6VGoAG5LvcbhCp5MCPM2Pxjtf9iqEUfkHG7J54kGWrJHNDTJnJ2rHDJKpCgpQhhyffqosUoF6zPCJcVvI",
-  "ygmmuyrZ3-pXcqPDyEw-V7jZY5YWQw0mFpTPKvxqGyo"
-);
-
 app.prepare().then(() => {
+  webPush.setVapidDetails(
+    "mailto:m.turner@zengenti.com",
+    "BOgbgF6VGoAG5LvcbhCp5MCPM2Pxjtf9iqEUfkHG7J54kGWrJHNDTJnJ2rHDJKpCgpQhhyffqosUoF6zPCJcVvI",
+    "ygmmuyrZ3-pXcqPDyEw-V7jZY5YWQw0mFpTPKvxqGyo"
+  );
   createServer(async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
