@@ -3,20 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --semantic-background-primary: #fff;
-  --semantic-background-secondary: #06151e;
+  --semantic-background-primary: #06151E;
 
-  --semantic-type-primary: #333;
-  --semantic-type-secondary: #fff;
+  --semantic-border-primary: #31577D;
 
-  --semantic-action-prority-primary-background: #06151E;
-  --semantic-action-prority-primary-hover: #00304d;
-  --semantic-action-prority-primary-text: #fff;
+  --semantic-type-primary: #fff;
+  --semantic-type-secondary: #ADF9EB;
 
-  --semantic-action-prority-secondary-background: #fff;
-  --semantic-action-prority-secondary-border: #5128C3;
-  --semantic-action-prority-secondary-hover: #E0D7F9;
-  --semantic-action-prority-secondary-text: #333;
+  --semantic-action-prority-primary-background: #fff;
+  --semantic-action-prority-primary-hover: #E0D7F9;
+  --semantic-action-prority-primary-text: #333;
 
 
   --foreground-rgb: 0, 0, 0;

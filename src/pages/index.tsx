@@ -2,6 +2,7 @@
 import React from "react";
 import { Client, Entry } from 'contensis-delivery-api';
 import Link from "next/link";
+import Pill from "@/components/pill/pill";
 
 const Home = () => {
 
@@ -107,6 +108,7 @@ const [events, setEvents] = React.useState<Entry[]>([]);
                         title={groupedEvt?.entryTitle}
                         text={groupedEvt?.entryDescription}
                         id={groupedEvt?.sys?.id}
+                        status={key}
                       />
                     )
                 })}
@@ -122,9 +124,10 @@ const [events, setEvents] = React.useState<Entry[]>([]);
 
 export default Home;
 
-const EventCard = ({ title, text, id }: any) => {
+const EventCard = ({ title, text, id, status }: any) => {
   return (
-      <li className="flex flex-col items-start justify-start w-full gap-4 border-y-[1px] border-[#DBDBDB] py-6 my-6">
+      <li className="flex flex-col items-start justify-start w-full gap-4 border-y-[1px] border-[var(--semantic-border-primary)] py-6 my-6">
+      <Pill status={status} />
       <h2 className="text-2xl">{title}</h2>
       {text && <p>{text}</p>}
       <Link href={`/events/${id}`} className="py-2 px-6 bg-[var(--semantic-action-prority-primary-background)] hover:bg-[var(--semantic-action-prority-primary-hover)] text-[var(--semantic-action-prority-primary-text)] rounded-[0.25rem] focus:outline-none self-start">View</Link>
