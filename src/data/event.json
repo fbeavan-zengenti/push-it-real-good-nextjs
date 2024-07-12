@@ -1,0 +1,445 @@
+{
+    "summary": "Come and join us for a night of merryment, if you remember it you weren't there",
+    "entryThumbnail": null,
+    "heading": {
+    "isDark": false,
+    "heading": null,
+    "markdown": null,
+    "leadCopy": null,
+    "theme": null
+    },
+    "composer": [
+    {
+    "type": "imageGallery",
+    "value": [
+    {
+    "altText": "",
+    "transformations": "w=720&h=480&crop=480,480,120,0",
+    "caption": "",
+    "asset": {
+    "entryTitle": "Velocity 2023-72",
+    "entryDescription": null,
+    "sys": {
+    "id": "a149bd51-3cae-4d75-a362-8ad75a77c585",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/blog-images/velocity-2023-72.x4f62fee8.jpg?w=720&h=480&crop=480,480,120,0"
+    }
+    }
+    },
+    {
+    "altText": "",
+    "transformations": "w=488&h=480&crop=480,480,4,0",
+    "caption": "",
+    "asset": {
+    "entryTitle": "velocity-welcome",
+    "entryDescription": null,
+    "sys": {
+    "id": "e5ca8749-efe7-43a6-b286-0fe64269815f",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/velocity-welcome.x55b0eafd.png?w=488&h=480&crop=480,480,4,0"
+    }
+    }
+    },
+    {
+    "altText": "",
+    "transformations": "w=480&h=480",
+    "caption": "",
+    "asset": {
+    "entryTitle": "Velocity-2019---0029",
+    "entryDescription": null,
+    "sys": {
+    "id": "fee52b5c-1a74-4a81-baec-9cedc8e8db22",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/velocity-2019-00291.x70d6ad92.png?w=480&h=480"
+    }
+    }
+    },
+    {
+    "altText": "",
+    "transformations": "w=480&h=483&crop=480,480,0,2",
+    "caption": "",
+    "asset": {
+    "entryTitle": "velocity-quote",
+    "entryDescription": null,
+    "sys": {
+    "id": "3da5aa80-3a9e-4b40-8ec5-7446c0364f96",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/featured-quote-images/velocity-quote1.x5b046371.png?w=480&h=483&crop=480,480,0,2"
+    }
+    }
+    },
+    {
+    "altText": "",
+    "transformations": "w=672&h=480&crop=480,480,96,0",
+    "caption": "",
+    "asset": {
+    "entryTitle": "Velocity 2023-10 2",
+    "entryDescription": null,
+    "sys": {
+    "id": "2bd947ea-ac33-4185-8de3-af67524c1bb4",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/blog-images/velocity-2023-10-2.xdb843a98.jpg?w=672&h=480&crop=480,480,96,0"
+    }
+    }
+    },
+    {
+    "altText": "",
+    "transformations": "w=720&h=480&crop=480,480,120,0",
+    "caption": "",
+    "asset": {
+    "entryTitle": "Velocity 2023-48",
+    "entryDescription": null,
+    "sys": {
+    "id": "fe7c19df-b420-4c51-a18b-f8babe2ffbc4",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/velocity-2023-48.x8a016e9d.jpg?w=720&h=480&crop=480,480,120,0"
+    }
+    }
+    }
+    ]
+    }
+    ],
+    "entryDescription": "Come and join us for a night of merryment, if you remember it you weren't there",
+    "agendaSlot": [
+    {
+    "entryTitle": "Welcome to Velocity",
+    "entryDescription": "Registration opens at 9:00 am. Enjoy a complimentary hot drink and pastry (or two) as you connect with fellow attendees. It's the perfect way to energise before the event starts at 9:30 am!",
+    "entryThumbnail": {
+    "altText": "Last Zengenti Velocity lanyards at the registration desk ",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "velocity-welcome",
+    "entryDescription": null,
+    "sys": {
+    "id": "e5ca8749-efe7-43a6-b286-0fe64269815f",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/velocity-welcome.x55b0eafd.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "92b2cbcd-b95a-4f60-8360-70a1fdf7fcbf",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Company update from Rich Chivers",
+    "entryDescription": "Start your day with a warm welcome from our CEO, Richard Chivers, who will set the stage for an exciting day and provide a company update. Join us as Richard shares insights into our company's progress, achievements, and future direction.",
+    "entryThumbnail": {
+    "altText": "Headshot of Richard Chivers at our last Zengenti Velocity event",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "rich-chivers",
+    "entryDescription": null,
+    "sys": {
+    "id": "1273d08d-4eee-4f87-85c9-0f7354fe6517",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/rich-chivers.x07ae156d.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "ca570e0e-ef49-48a7-94e7-0fa765c0758a",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Lunch",
+    "entryDescription": null,
+    "entryThumbnail": null,
+    "sys": {
+    "id": "48e16a1c-c18c-4b12-9171-6e59f32b3275",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Building composable landing pages with Contensis",
+    "entryDescription": "Want to launch new landing pages efficiently, consistently, and without help from a developer? Learn what a design system is, why you need one, and how to implement yours in Contensis so your teams can launch unique pages without writing code.",
+    "entryThumbnail": {
+    "altText": "An simple UI image with two cursors - one saying 'Ryan' and the other 'Mart'",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "composable-page-illustration",
+    "entryDescription": null,
+    "sys": {
+    "id": "fecaac70-e617-4d3f-aa2e-610b2e1c0a30",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/composable-page-illustration.x94fa9020.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "beecdfd1-0313-4b5f-afff-bc65c6c83a91",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Recommending a headless CMS",
+    "entryDescription": "Hear the story of healthcare company Revitive; why they selected Contensis to run their new ecommerce operation and how they've leveraged its headless capability to integrate with their key business systems.",
+    "entryThumbnail": {
+    "altText": "Revitive logo",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "revitive-case-study",
+    "entryDescription": null,
+    "sys": {
+    "id": "bebf96e2-050c-4e48-832a-5ca895b74c9d",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/revitive-case-study.xb435b5ea.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "e155bc96-f842-4783-970c-eab040ab3255",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Tea and coffee break",
+    "entryDescription": null,
+    "entryThumbnail": null,
+    "sys": {
+    "id": "393f6aa6-272c-4ee3-8cea-74a63b6499fd",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Q&A with the team",
+    "entryDescription": "Here's your chance to engage with our expert team directly. Bring your questions, thoughts, and curiosity to this interactive Q&A session.",
+    "entryThumbnail": {
+    "altText": "Panel image of Rich Civers and Rich Saunders from our last Zengenti Velocity event",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "q-and-a",
+    "entryDescription": null,
+    "sys": {
+    "id": "ab79c834-c503-4742-adf5-7a99b1973b13",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/q-and-a.xbfed9816.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "3a7f2725-757b-4509-b0d8-443dd5cd6ec9",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Digital Accessibility Centre (DAC)",
+    "entryDescription": "Prepare for a groundbreaking session with our guest speakers from the DAC. Gavin Evans and Michael Taylor will enlighten you on the real-world impact of accessibility in practice. ",
+    "entryThumbnail": {
+    "altText": "The DAC logo",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "dac",
+    "entryDescription": null,
+    "sys": {
+    "id": "4d311147-41e0-49c4-aca4-353b195f93b4",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/dac.x16219b5a.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "5add4d55-3f6f-4bb2-992c-db4a57b7f55e",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "Closing talk",
+    "entryDescription": "As we reach the end of Velocity, join us for a concise overview of what's coming next. We'll touch on highlights, express gratitude, and hint at the exciting future awaiting us all. Thank you for being part of this incredible event!",
+    "entryThumbnail": {
+    "altText": "The Zengenti Velocity audience",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "closing-talk",
+    "entryDescription": null,
+    "sys": {
+    "id": "158bc950-52f0-4bf9-ac0a-b7b020c634e1",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/closing-talk.x5a10c077.jpg"
+    }
+    }
+    },
+    "sys": {
+    "id": "274c4381-83d6-4318-9719-1c50d2f96702",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    },
+    {
+    "entryTitle": "TEST - Event agenda item",
+    "entryDescription": "Lorem ipsum dolor sit amet consectetur. Eget iaculis ultricies mi vestibulum sit purus. Non ornare tempus elementum nunc amet. Auctor ipsum elementum vitae at scelerisque. ",
+    "entryThumbnail": {
+    "altText": "",
+    "caption": "",
+    "transformations": null,
+    "asset": {
+    "entryTitle": "velocity-welcome",
+    "entryDescription": null,
+    "sys": {
+    "id": "e5ca8749-efe7-43a6-b286-0fe64269815f",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/image-library/event-images/velocity-welcome.x55b0eafd.png"
+    }
+    }
+    },
+    "sys": {
+    "id": "f401e108-f740-40b0-b39b-cc33cc7f8f8c",
+    "language": "en-GB",
+    "contentTypeId": "eventAgendaItem",
+    "dataFormat": "entry",
+    "uri": null
+    }
+    }
+    ],
+    "title": "TEST EVENT - A night to forget",
+    "sys": {
+    "owner": "m.turner",
+    "metadata": {},
+    "workflow": {
+    "id": "contensisEntryBasic",
+    "state": "draft"
+    },
+    "dataFormat": "entry",
+    "isPublished": true,
+    "availableLanguages": [
+    "en-GB"
+    ],
+    "contentTypeId": "event",
+    "language": "en-GB",
+    "allUris": [],
+    "uri": null,
+    "version": {
+    "publishedBy": "m.turner",
+    "archived": null,
+    "deleted": null,
+    "createdBy": "m.turner",
+    "created": "2020-01-10T11:48:03.321771Z",
+    "versionNo": "1.11",
+    "modified": "2024-07-12T14:08:02.8610731Z",
+    "modifiedBy": "f.beavan",
+    "published": "2020-01-10T11:48:05.3062182Z",
+    "archivedBy": null,
+    "deletedBy": null
+    },
+    "versionStatus": "latest",
+    "id": "dfceb68a-90e1-4a19-9bd3-f12b9bb13098",
+    "projectId": "contensis",
+    "slug": "test-event-a-night-to-forget",
+    "properties": {}
+    },
+    "socialMetadata": {
+    "image": null,
+    "metaTitle": null,
+    "metaDescription": null,
+    "isSearchIndexable": false
+    },
+    "simpleLocation": {
+    "continent": null,
+    "country": [],
+    "city": null,
+    "county": null,
+    "postcode": null,
+    "addressLine1": null,
+    "addressLine2": null,
+    "location": null
+    },
+    "calendarInvite": {
+    "googleCalendar": null,
+    "iCalendar": null
+    },
+    "logo": {
+    "altText": "",
+    "transformations": null,
+    "caption": "",
+    "asset": {
+    "entryTitle": "velocity-logo",
+    "entryDescription": null,
+    "sys": {
+    "id": "4d094bf2-d504-4af4-8a27-3edb61820357",
+    "language": "en-GB",
+    "contentTypeId": "image",
+    "dataFormat": "asset",
+    "uri": "/asset-library/company-logos/velocity-logo.xbf1aa304.png"
+    }
+    }
+    },
+    "multibenefitBreakdown": {
+    "button": {
+    "linkDestination": null,
+    "anchorLink": null,
+    "buttonLabel": null
+    },
+    "image": null,
+    "isDark": false,
+    "leadBenefit": null,
+    "subbenefit": []
+    },
+    "entryTitle": "TEST EVENT - A night to forget",
+    "eventDate": {
+    "from": "2024-07-12T00:00:00",
+    "to": "2024-07-12T00:00:00"
+    }
+    }

@@ -1,10 +1,10 @@
 "use client"
 import React from "react";
-import { Client, Entry } from 'contensis-delivery-api';
 import Link from "next/link";
 import Pill from "@/components/pill/pill";
 import DateSelector from "@/components/dateSelector/dateSelector";
 import Image from "next/image";
+import eventEntry from '@/data/event.json'
 
 const Home = () => {
 
@@ -36,9 +36,9 @@ const Home = () => {
 }, []);
 
 
-const id = "dfceb68a-90e1-4a19-9bd3-f12b9bb13098";
 
-const [entry, setEntry] = React.useState<Entry>();
+const entry = eventEntry;
+
 const [status, setStatus] = React.useState<string>();
 
 const today = new Date();
@@ -68,21 +68,6 @@ React.useEffect(() => {
   setStatus(evtStatus);
 }, [entry, date])
 
-
-
-  React.useEffect(() => {
-      const client = Client.create({
-        rootUrl: 'https://live-zenhub.cloud.contensis.com',
-        accessToken: 'sNF3SnNWu6RMAtpzybcOqkHKUlMnEUwrNre0OlD9G8UERroN',
-        projectId: 'contensis',
-        language: 'en-GB',
-        versionStatus: 'latest',
-        pageSize: 9
-      });
-
-      client.entries.get({ id, linkDepth: 2 }).then(entry => setEntry(entry));
-    }, [id]);
-  
 
   const imgHost = 'https://www.contensis.com';
   const imgPath = entry?.logo?.asset?.sys?.uri;
