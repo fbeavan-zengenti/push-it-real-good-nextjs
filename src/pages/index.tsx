@@ -120,7 +120,7 @@ React.useEffect(() => {
 
 
   return (
-    <div className='min-h-screen bg-[var(--semantic-background-primary)] text-[var(--semantic-type-primary)]'>
+    <div className='min-h-screen bg-[var(--semantic-background-primary)] text-[var(--semantic-type-primary)] py-[80px]'>
       <div className='flex flex-col w-full max-w-[320px] gap-[8px] mx-auto'>
         <DateSelector  today={today} setDate={setDate} date={date} />
       </div>

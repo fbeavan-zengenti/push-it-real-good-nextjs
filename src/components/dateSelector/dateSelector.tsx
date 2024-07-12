@@ -25,7 +25,7 @@ const DateSelector = ({ today, date, setDate }: any) => {
   };
 
   return (
-    <div>
+    <div className='text-center'>
       <p className='mb-4 text-lg'>Override Date: <b>{date}</b></p>
       <select
         name="override-date"
